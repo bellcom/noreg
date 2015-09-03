@@ -1,0 +1,4 @@
+name        = 'Content types'
+description = 'Contains content types for Noreg'
+core        = 7.x
+package     = 'Noreg'

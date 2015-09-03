@@ -1,0 +1,108 @@
+// |--------------------------------------------------------------------------
+// | Header
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .header
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+@header-background-color: 		@gray-dark;
+@header-border-bottom-color: 	@gray-darker;
+
+@header-logo-img-1x-src: 	'../img/header/logo-1x.png';
+@header-logo-img-2x-src: 	'../img/header/logo-2x.png';
+@header-logo-height: 		34px;
+@header-logo-width: 		139px;
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Header
+.header {
+	background-color: @header-background-color;
+
+	border-bottom-width: 4px;
+	border-bottom-style: solid;
+	border-bottom-color: @header-border-bottom-color;
+
+	.header-logo {
+		display: block;
+		margin: auto;
+		height: @header-logo-height;
+		width: @header-logo-width;
+		.img-retina(@header-logo-img-1x-src, @header-logo-img-2x-src, @header-logo-width, @header-logo-height);
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile
+@media @media-query-mobile {
+
+	// Header
+	.header {
+		padding: 10px 0;
+	}
+}
+
+// Mobile - only
+@media @media-query-mobile-only {
+
+	// Header
+	.header {}
+}
+
+// Tablet
+@media @media-query-tablet {
+
+	// Header
+	.header {
+		padding: 30px 0;
+	}
+}
+
+// Tablet - only
+@media @media-query-tablet-only {
+
+	// Header
+	.header {}
+}
+
+// Desktop
+@media @media-query-desktop {
+
+	// Header
+	.header {
+		padding: 50px 0;
+	}
+}
+
+// Desktop - only
+@media @media-query-desktop-only {
+
+	// Header
+	.header {}
+}
+
+// Large desktop
+@media @media-query-large-desktop {
+
+	// Header
+	.header {}
+}
+
+// Large desktop - only
+@media @media-query-large-desktop-only {
+
+	// Header
+	.header {}
+}
