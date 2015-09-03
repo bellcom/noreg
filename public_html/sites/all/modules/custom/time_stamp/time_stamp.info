@@ -1,0 +1,6 @@
+name            = 'Time stamp'
+description     = 'Allows for a timestamp function.'
+package         = 'Noreg'
+;dependencies[]  = ''
+core            = '7.x'
+;files[]         = ''

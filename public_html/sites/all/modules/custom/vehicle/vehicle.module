@@ -1,0 +1,29 @@
+<?php
+
+/*
+ * Implements hook_menu().
+ */
+function vehicle_menu() {
+  $items = array();
+
+  // Add
+  $items['koeretoejer/add'] = array(
+    'title'           => t('Tilføj køretøj'),
+    'page callback'   => 'drupal_get_form',
+    'page arguments'  => array('vehicle_form'),
+    'access callback' => 'user_is_logged_in',
+    'file'            => 'includes/form.inc',
+  );
+
+  // Edit
+  $items['koeretoejer/%node/edit'] = array(
+    'title'           => t('Rediger køretøj'),
+    'page callback'   => 'drupal_get_form',
+    'page arguments'  => array('vehicle_form', 1),
+    'access callback' => 'user_is_logged_in',
+    'file'            => 'includes/form.inc',
+  );
+
+  // Return items
+  return $items;
+}

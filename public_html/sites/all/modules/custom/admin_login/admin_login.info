@@ -1,0 +1,6 @@
+name            = 'Admin login'
+description     = 'Creates a seperate login style for the company users.'
+package         = 'Noreg'
+;dependencies[]  = ''
+core            = '7.x'
+;files[]         = ''

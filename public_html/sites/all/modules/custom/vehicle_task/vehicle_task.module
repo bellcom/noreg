@@ -1,0 +1,29 @@
+<?php
+
+/*
+ * Implements hook_menu().
+ */
+function vehicle_task_menu() {
+  $items = array();
+
+  // Add
+  $items['opgaver/add'] = array(
+    'title'           => t('Tilføj opgave'),
+    'page callback'   => 'drupal_get_form',
+    'page arguments'  => array('task_form'),
+    'access callback' => 'user_is_logged_in',
+    'file'            => 'includes/form.inc',
+  );
+
+  // Edit
+  $items['opgaver/%node/edit'] = array(
+    'title'           => t('Rediger opgave'),
+    'page callback'   => 'drupal_get_form',
+    'page arguments'  => array('task_form', 1),
+    'access callback' => 'user_is_logged_in',
+    'file'            => 'includes/form.inc',
+  );
+
+  // Return items
+  return $items;
+}

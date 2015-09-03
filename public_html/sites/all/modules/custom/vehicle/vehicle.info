@@ -1,0 +1,6 @@
+name            = 'Vehicle'
+description     = 'Handles all regarding vehicles.'
+package         = 'Noreg'
+;dependencies[]  = ''
+core            = '7.x'
+;files[]         = ''

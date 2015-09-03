@@ -1,0 +1,100 @@
+<?php
+
+/**
+ * Implements hook_init().
+ */
+function admin_login_init() {
+  global $user;
+
+  // Set allowed URLs
+  $allowed_urls = array(
+    '/cron.php*',
+    '/xmlrpc.php',
+    '/sites/default/files/styles*',
+    '/user*',
+    '/admin/login*',
+    '/admin/login/departments',
+    '/admin/login/*/users',
+    '/admin/login/form/*',
+  );
+
+  // Anonymous user, URL not allowed, not from CLI
+  if ($user->uid == 0 && !drupal_match_path(request_uri(), implode("\n", $allowed_urls)) && !drupal_is_cli()) {
+
+    // Redirect to login
+    drupal_goto('user', array('query' => array('destination' => current_path())));
+  }
+}
+
+/**
+ * Implements hook_menu().
+ * - admin/login (redirect to login departments, if not logged in)
+ * - admin/login/departments
+ * - admin/login/{department_id}/users
+ * - admin/login/form/{user_id}
+ */
+function admin_login_menu() {
+  $items = array();
+
+  // Redirect
+  $items['admin/login'] = array(
+    'page callback'   => 'admin_login_redirect',
+    'access callback' => 'user_is_anonymous',
+    'file' => 'includes/redirect.inc',
+  );
+
+  // Departments
+  $items['admin/login/departments'] = array(
+    'page callback'   => 'admin_login_departments_page',
+    'access callback' => 'user_is_anonymous',
+    'file' => 'includes/departments.inc',
+  );
+
+  // Users
+  $items['admin/login/%/users'] = array(
+    'page callback'   => 'admin_login_users_page',
+    'page arguments'  => array(2),
+    'access callback' => 'user_is_anonymous',
+    'file'              => 'includes/users.inc',
+  );
+
+  // Login
+  $items['admin/login/form/%user'] = array(
+    'page callback'   => 'drupal_get_form',
+    'page arguments'  => array('admin_login_form', 3),
+    'access callback' => 'user_is_anonymous',
+    'file' => 'includes/login-form.inc',
+  );
+
+  // Return items
+  return $items;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function admin_login_theme($existing, $type, $theme, $path) {
+  $path = drupal_get_path('module', 'admin_login') . '/templates';
+
+  // Options
+  $theme_options = array(
+
+    // Departments
+    'admin_login_departments' => array(
+      'template'  => 'templates/department',
+      'arguments' => array(
+        'department' => NULL,
+      ),
+    ),
+    // Users
+    'admin_login_users'       => array(
+      'template'  => 'templates/user',
+      'arguments' => array(
+        'user' => NULL,
+      ),
+    ),
+  );
+
+  // Return
+  return $theme_options;
+}
