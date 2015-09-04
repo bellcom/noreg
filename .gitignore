@@ -45,19 +45,6 @@ sessions
 tmp
 share
 
-# Drupal 7
-public_html/CHANGELOG.txt
-public_html/COPYRIGHT.txt
-public_html/INSTALL.mysql.txt
-public_html/INSTALL.pgsql.txt
-public_html/install.php
-public_html/INSTALL.sqlite.txt
-public_html/INSTALL.txt
-public_html/LICENSE.txt
-public_html/MAINTAINERS.txt
-public_html/README.txt
-public_html/UPGRADE.txt
-
 # Files that might appear on external disks
 .Spotlight-V100
 .Trashes

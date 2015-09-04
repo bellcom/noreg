@@ -1,0 +1,4 @@
+name        = 'Seperated login'
+description = 'Handles 3 different types of login for Noreg.'
+core        = 7.x
+package     = 'Noreg'

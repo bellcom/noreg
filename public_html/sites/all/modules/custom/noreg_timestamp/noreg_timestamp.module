@@ -1,0 +1,67 @@
+<?php
+/**
+ * @file
+ * Time tracker module
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function time_tracker_menu() {
+
+  // Empty array
+  $items = array();
+
+  // Start timetracker
+  $items['time_tracker/start'] = array(
+    'page callback'     => 'time_tracker_start',
+    'access callback'   => TRUE,
+    'delivery callback' => 'drupal_json_output',
+  );
+
+  // Stop timetracker
+  return $items;
+}
+
+/**
+ * Implements hook_form()
+ * @return array
+ */
+function time_tracker_start_form() {
+  $form = array();
+
+  $form['submit'] = array(
+    '#type'  => 'submit',
+    '#value' => 'Start',
+  );
+
+  return $form;
+}
+
+/**
+ * @param $id
+ *
+ * @return array
+ * @throws \Exception
+ */
+function time_tracker_start($id) {
+  global $user;
+
+  $node = new stdClass();
+
+  $node->title = "Tidsstempel";
+  $node->type = "timestamps";
+  $node->uid = $user->uid;
+  $node->status = 1;
+  node_object_prepare($node);
+
+  $node->field_timestamp_vehicle_task_id[LANGUAGE_NONE][0]['target_id'] = (int) $id;
+  $node->field_timestamp_stamps[LANGUAGE_NONE][0]['value'] = REQUEST_TIME;
+  $node->field_timestamp_stamps[LANGUAGE_NONE][0]['value2'] = 0;
+
+  $node = node_submit($node);
+  node_save($node);
+
+  return json_encode();
+  return ["error" => FALSE];
+}

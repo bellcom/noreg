@@ -1,0 +1,4 @@
+name        = 'Timestamp'
+description = 'Allows users to register timestamps.'
+core        = 7.x
+package     = 'Noreg'

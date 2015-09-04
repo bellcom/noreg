@@ -5,15 +5,9 @@
 */
 function noreg_content_types_entity_info_alter(&$entity_info) {
 
-  // Teaser - simple
-  $entity_info['node']['view modes']['teaser_simple'] = array(
-    'label'           => t('Teaser - simple'),
-    'custom settings' => TRUE,
-  );
-
-  // Teaser - advanced
-  $entity_info['node']['view modes']['teaser_advanced'] = array(
-    'label'           => t('Teaser - advanced'),
+  // List
+  $entity_info['node']['view modes']['list'] = array(
+    'label'           => t('List'),
     'custom settings' => TRUE,
   );
 }
