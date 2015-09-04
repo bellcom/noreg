@@ -1,5 +1,5 @@
 <?php if ($view_mode == 'list'): ?>
-  <!-- node--vehicle--list.tpl.php -->
+  <!-- node--task--list.tpl.php -->
   <!-- Begin - list -->
   <section id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> noreg-list"<?php print $attributes; ?>>
 
@@ -12,20 +12,20 @@
     <!-- Begin - body -->
     <div class="noreg-list-body">
 
-      <?php if (isset($content['field_license_plate'])): ?>
-        <!-- Begin - license plate -->
-        <div class="noreg-list-body-license-plate">
-          <?php print render($content['field_license_plate']); ?>
+      <?php if (isset($content['field_starting_date'])): ?>
+        <!-- Begin - starting date -->
+        <div class="noreg-list-body-starting-date">
+          <?php print render($content['field_starting_date']); ?>
         </div>
-        <!-- End - license plate -->
+        <!-- End - starting date -->
       <?php endif; ?>
 
-      <?php if (isset($content['field_status'])): ?>
-        <!-- Begin - status -->
-        <div class="noreg-list-body-status">
-          <?php print render($content['field_status']); ?>
+      <?php if (isset($content['field_vehicle'])): ?>
+        <!-- Begin - vehicle -->
+        <div class="noreg-list-body-vehicle">
+          <?php print render($content['field_vehicle']); ?>
         </div>
-        <!-- End - status -->
+        <!-- End - vehicle -->
       <?php endif; ?>
 
     </div>

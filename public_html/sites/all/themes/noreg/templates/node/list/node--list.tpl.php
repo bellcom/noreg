@@ -1,21 +1,20 @@
 <?php if ($view_mode == 'list'): ?>
-  <!-- Begin - teaser (node--list.tpl.php) -->
-  <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> noreg-list"<?php print $attributes; ?>>
+  <!-- node--list.tpl.php -->
+  <!-- Begin - list -->
+  <section id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> noreg-list"<?php print $attributes; ?>>
 
-    <!-- Begin - full width image -->
-    <?php if (isset($content['field_image'])) : ?>
-      <div class="full-width-image">
-        <?php print render($content['field_image']); ?>
-      </div>
-    <?php endif; ?>
-    <!-- End - full width image -->
+    <!-- Begin - heading -->
+    <div class="noreg-list-heading">
+      <h3 class="noreg-list-title"><a href="<?php print $base_url . $node_url; ?>"><?php print $title; ?></a></h3>
+    </div>
+    <!-- End - heading -->
 
     <!-- Begin - body -->
-    <div class="teaser-body">
+    <div class="noreg-list-body">
     </div>
     <!-- End - body -->
 
-  </article>
-  <!-- End - teaser -->
+  </section>
+  <!-- End - list -->
 
 <?php endif; ?>

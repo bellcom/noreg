@@ -75,7 +75,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-6 text-center-xs-only">
-            <p>Carefully crafted with <span class="icon fa fa-heart"></span> <a href="https://github.com/by-nissen/" target="_blank">@by-nissen</a></p>
+            <p>Copyright <a href="http://www.noreg.dk" target="_blank">NOREG</a></p>
           </div>
           <div class="col-sm-6 text-center-xs-only">
 

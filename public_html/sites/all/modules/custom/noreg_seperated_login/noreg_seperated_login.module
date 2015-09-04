@@ -6,7 +6,6 @@
 function noreg_seperated_login_init() {
   global $user;
 
-  // Set allowed URLs
   $allowed_urls = array(
     '/cron.php*',
     '/xmlrpc.php',
@@ -18,10 +17,8 @@ function noreg_seperated_login_init() {
     '/admin/login/form/*',
   );
 
-  // Anonymous user, URL not allowed, not from CLI
   if ($user->uid == 0 && !drupal_match_path(request_uri(), implode("\n", $allowed_urls)) && !drupal_is_cli()) {
 
-    // Redirect to login
     drupal_goto('user', array('query' => array('destination' => current_path())));
   }
 }
@@ -36,29 +33,22 @@ function noreg_seperated_login_init() {
 function noreg_seperated_login_menu() {
   $items = array();
 
-  // Redirect
   $items['admin/login'] = array(
     'page callback'   => 'noreg_seperated_login_redirect',
     'access callback' => 'user_is_anonymous',
     'file' => 'includes/redirect.inc',
   );
-
-  // Departments
   $items['admin/login/departments'] = array(
     'page callback'   => 'noreg_seperated_login_departments_page',
     'access callback' => 'user_is_anonymous',
     'file' => 'includes/departments.inc',
   );
-
-  // Users
   $items['admin/login/%/users'] = array(
     'page callback'   => 'noreg_seperated_login_users_page',
     'page arguments'  => array(2),
     'access callback' => 'user_is_anonymous',
     'file'              => 'includes/users.inc',
   );
-
-  // Login
   $items['admin/login/form/%user'] = array(
     'page callback'   => 'drupal_get_form',
     'page arguments'  => array('noreg_seperated_login_form', 3),
@@ -66,7 +56,6 @@ function noreg_seperated_login_menu() {
     'file' => 'includes/login-form.inc',
   );
 
-  // Return items
   return $items;
 }
 
@@ -76,17 +65,13 @@ function noreg_seperated_login_menu() {
 function noreg_seperated_login_theme($existing, $type, $theme, $path) {
   $path = drupal_get_path('module', 'noreg_seperated_login') . '/templates';
 
-  // Options
   $theme_options = array(
-
-    // Departments
     'noreg_seperated_login_departments' => array(
       'template'  => 'templates/department',
       'arguments' => array(
         'department' => NULL,
       ),
     ),
-    // Users
     'noreg_seperated_login_users'       => array(
       'template'  => 'templates/user',
       'arguments' => array(
@@ -95,6 +80,5 @@ function noreg_seperated_login_theme($existing, $type, $theme, $path) {
     ),
   );
 
-  // Return
   return $theme_options;
 }

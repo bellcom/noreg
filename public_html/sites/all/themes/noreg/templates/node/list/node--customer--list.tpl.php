@@ -1,5 +1,5 @@
 <?php if ($view_mode == 'list'): ?>
-  <!-- node--vehicle--list.tpl.php -->
+  <!-- node--customer--list.tpl.php -->
   <!-- Begin - list -->
   <section id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> noreg-list"<?php print $attributes; ?>>
 
@@ -12,20 +12,20 @@
     <!-- Begin - body -->
     <div class="noreg-list-body">
 
-      <?php if (isset($content['field_license_plate'])): ?>
-        <!-- Begin - license plate -->
-        <div class="noreg-list-body-license-plate">
-          <?php print render($content['field_license_plate']); ?>
+      <?php if (isset($content['field_email_addresses'])): ?>
+        <!-- Begin - email addresses -->
+        <div class="noreg-list-body-email-addresses">
+          <?php print render($content['field_email_addresses']); ?>
         </div>
-        <!-- End - license plate -->
+        <!-- End - email addresses -->
       <?php endif; ?>
 
-      <?php if (isset($content['field_status'])): ?>
-        <!-- Begin - status -->
-        <div class="noreg-list-body-status">
-          <?php print render($content['field_status']); ?>
+      <?php if (isset($content['field_phone_customer_no'])): ?>
+        <!-- Begin - customer/phone number -->
+        <div class="noreg-body-phone-customer-number">
+          <?php print render($content['field_phone_customer_no']); ?>
         </div>
-        <!-- End - status -->
+        <!-- End - customer/phone number -->
       <?php endif; ?>
 
     </div>

@@ -52,6 +52,98 @@
 // Styling
 // --------------------------------------------------
 
+// Headings
+h1, .heading-h1 {
+
+	@media @media-query-mobile-only {
+		font-size: floor((@font-size-h1 * @bs3-designer-headings-font-size-xs));
+	}
+	@media @media-query-tablet-only {
+		font-size: floor((@font-size-h1 * @bs3-designer-headings-font-size-sm));
+	}
+	@media @media-query-desktop-only {
+		font-size: floor((@font-size-h1 * @bs3-designer-headings-font-size-md));
+	}
+	@media @media-query-large-desktop-only {
+		font-size: floor((@font-size-h1 * @bs3-designer-headings-font-size-lg));
+	}
+}
+h2, .heading-h2 {
+
+	@media @media-query-mobile-only {
+		font-size: floor((@font-size-h2 * @bs3-designer-headings-font-size-xs));
+	}
+	@media @media-query-tablet-only {
+		font-size: floor((@font-size-h2 * @bs3-designer-headings-font-size-sm));
+	}
+	@media @media-query-desktop-only {
+		font-size: floor((@font-size-h2 * @bs3-designer-headings-font-size-md));
+	}
+	@media @media-query-large-desktop-only {
+		font-size: floor((@font-size-h2 * @bs3-designer-headings-font-size-lg));
+	}
+}
+h3, .heading-h3 {
+
+	@media @media-query-mobile-only {
+		font-size: floor((@font-size-h3 * @bs3-designer-headings-font-size-xs));
+	}
+	@media @media-query-tablet-only {
+		font-size: floor((@font-size-h3 * @bs3-designer-headings-font-size-sm));
+	}
+	@media @media-query-desktop-only {
+		font-size: floor((@font-size-h3 * @bs3-designer-headings-font-size-md));
+	}
+	@media @media-query-large-desktop-only {
+		font-size: floor((@font-size-h3 * @bs3-designer-headings-font-size-lg));
+	}
+}
+h4, .heading-h4, .lead {
+
+	@media @media-query-mobile-only {
+		font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-xs));
+	}
+	@media @media-query-tablet-only {
+		font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-sm));
+	}
+	@media @media-query-desktop-only {
+		font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-md));
+	}
+	@media @media-query-large-desktop-only {
+		font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-lg));
+	}
+}
+h5, .heading-h5 {
+
+	@media @media-query-mobile-only {
+		font-size: floor((@font-size-h5 * @bs3-designer-headings-font-size-xs));
+	}
+	@media @media-query-tablet-only {
+		font-size: floor((@font-size-h5 * @bs3-designer-headings-font-size-sm));
+	}
+	@media @media-query-desktop-only {
+		font-size: floor((@font-size-h5 * @bs3-designer-headings-font-size-md));
+	}
+	@media @media-query-large-desktop-only {
+		font-size: floor((@font-size-h5 * @bs3-designer-headings-font-size-lg));
+	}
+}
+h6, .heading-h6 {
+
+	@media @media-query-mobile-only {
+		font-size: floor((@font-size-h6 * @bs3-designer-headings-font-size-xs));
+	}
+	@media @media-query-tablet-only {
+		font-size: floor((@font-size-h6 * @bs3-designer-headings-font-size-sm));
+	}
+	@media @media-query-desktop-only {
+		font-size: floor((@font-size-h6 * @bs3-designer-headings-font-size-md));
+	}
+	@media @media-query-large-desktop-only {
+		font-size: floor((@font-size-h6 * @bs3-designer-headings-font-size-lg));
+	}
+}
+
 // Colouring
 .font-color-white {
 
@@ -109,11 +201,17 @@ body {
 	.bold, strong { font-weight: @bs3-designer-font-weight-bold; }
 
 	h1,
+	.heading-h1,
 	h2,
+	.heading-h2,
 	h3,
+	.heading-h3,
 	h4,
+	.heading-h4,
 	h5,
+	.heading-h5,
 	h6,
+	.heading-h6,
     .lead {
 		font-weight: @bs3-designer-headings-font-weight;
 
@@ -125,12 +223,12 @@ body {
 }
 
 // Letter spacing
-h1 { letter-spacing: @bs3-designer-headings-h1-letter-spacing; }
-h2 { letter-spacing: @bs3-designer-headings-h2-letter-spacing; }
-h3 { letter-spacing: @bs3-designer-headings-h3-letter-spacing; }
-h4 { letter-spacing: @bs3-designer-headings-h4-letter-spacing; }
-h5 { letter-spacing: @bs3-designer-headings-h5-letter-spacing; }
-h6 { letter-spacing: @bs3-designer-headings-h6-letter-spacing; }
+h1, .heading-h1 { letter-spacing: @bs3-designer-headings-h1-letter-spacing; }
+h2, .heading-h2 { letter-spacing: @bs3-designer-headings-h2-letter-spacing; }
+h3, .heading-h3 { letter-spacing: @bs3-designer-headings-h3-letter-spacing; }
+h4, .heading-h4 { letter-spacing: @bs3-designer-headings-h4-letter-spacing; }
+h5, .heading-h5 { letter-spacing: @bs3-designer-headings-h5-letter-spacing; }
+h6, .heading-h6 { letter-spacing: @bs3-designer-headings-h6-letter-spacing; }
 .lead { letter-spacing: @bs3-designer-headings-h4-letter-spacing; }
 
 // Smoothing
@@ -143,11 +241,18 @@ body {
 	input { .bs3-designer-mixin-font-smoothing(); }
 
 	h1,
+	.heading-h1,
 	h2,
+	.heading-h2,
 	h3,
+	.heading-h3,
 	h4,
+	.heading-h4,
 	h5,
-	h6 { .bs3-designer-mixin-font-smoothing(); }
+	.heading-h5,
+	h6,
+	.heading-h6,
+	.lead { .bs3-designer-mixin-font-smoothing(); }
 }
 
 // --------------------------------------------------
@@ -160,12 +265,6 @@ body {
   .text-right-xs-only { text-align: right; }
   .text-center-xs-only { text-align: center; }
 
-  h1 { font-size: floor((@font-size-h1 * @bs3-designer-headings-font-size-xs)); }
-  h2 { font-size: floor((@font-size-h2 * @bs3-designer-headings-font-size-xs)); }
-  h3 { font-size: floor((@font-size-h3 * @bs3-designer-headings-font-size-xs)); }
-  h4 { font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-xs)); }
-  h5 { font-size: floor((@font-size-h5 * @bs3-designer-headings-font-size-xs)); }
-  h6 { font-size: floor((@font-size-h6 * @bs3-designer-headings-font-size-xs)); }
   .lead { font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-xs)); }
 }
 @media @media-query-mobile {
@@ -180,12 +279,6 @@ body {
   .text-right-sm-only { text-align: right; }
   .text-center-sm-only { text-align: center; }
 
-  h1 { font-size: floor((@font-size-h1 * @bs3-designer-headings-font-size-sm)); }
-  h2 { font-size: floor((@font-size-h2 * @bs3-designer-headings-font-size-sm)); }
-  h3 { font-size: floor((@font-size-h3 * @bs3-designer-headings-font-size-sm)); }
-  h4 { font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-sm)); }
-  h5 { font-size: floor((@font-size-h5 * @bs3-designer-headings-font-size-sm)); }
-  h6 { font-size: floor((@font-size-h6 * @bs3-designer-headings-font-size-sm)); }
   .lead { font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-sm)); }
 }
 @media @media-query-tablet {
@@ -200,12 +293,6 @@ body {
   .text-right-md-only { text-align: right; }
   .text-center-md-only { text-align: center; }
 
-  h1 { font-size: floor((@font-size-h1 * @bs3-designer-headings-font-size-md)); }
-  h2 { font-size: floor((@font-size-h2 * @bs3-designer-headings-font-size-md)); }
-  h3 { font-size: floor((@font-size-h3 * @bs3-designer-headings-font-size-md)); }
-  h4 { font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-md)); }
-  h5 { font-size: floor((@font-size-h5 * @bs3-designer-headings-font-size-md)); }
-  h6 { font-size: floor((@font-size-h6 * @bs3-designer-headings-font-size-md)); }
   .lead { font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-md)); }
 }
 @media @media-query-desktop {
@@ -220,12 +307,6 @@ body {
   .text-right-lg-only { text-align: right; }
   .text-center-lg-only { text-align: center; }
 
-  h1 { font-size: floor((@font-size-h1 * @bs3-designer-headings-font-size-lg)); }
-  h2 { font-size: floor((@font-size-h2 * @bs3-designer-headings-font-size-lg)); }
-  h3 { font-size: floor((@font-size-h3 * @bs3-designer-headings-font-size-lg)); }
-  h4 { font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-lg)); }
-  h5 { font-size: floor((@font-size-h5 * @bs3-designer-headings-font-size-lg)); }
-  h6 { font-size: floor((@font-size-h6 * @bs3-designer-headings-font-size-lg)); }
   .lead { font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-lg)); }
 }
 @media @media-query-large-desktop {

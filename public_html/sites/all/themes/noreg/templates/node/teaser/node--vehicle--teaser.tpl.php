@@ -1,83 +1,66 @@
 <?php if ($view_mode == 'teaser'): ?>
-  <!-- Begin - teaser (node--vehicle--teaser.tpl.php) -->
-  <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> teaser"<?php print $attributes; ?>>
+  <!-- node--vehicle--teaser.tpl.php -->
+  <!-- Begin - teaser -->
+  <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> noreg-teaser"<?php print $attributes; ?>>
+
+    <!-- Begin - heading -->
+    <div class="noreg-teaser-heading">
+      <h3 class="noreg-teaser-title"><a href="<?php print $base_url . $node_url; ?>"><?php print $title; ?></a></h3>
+    </div>
+    <!-- End - heading -->
 
     <!-- Begin - body -->
-    <div class="teaser-body">
+    <div class="noreg-teaser-body">
 
-      <!-- Begin - breed, location and price -->
-      <section class="teaser-section-2-columns">
-
-        <?php if (isset($animal_breed) && isset($user_location)): ?>
-          <div class="teaser-section-column">
-
-            <?php if (isset($animal_breed)): ?>
-              <div class="teaser-breed-container">
-                <p class="teaser-content-field"><?php print render($animal_breed); ?></p>
-              </div>
-            <?php endif ?>
-
-            <?php if (isset($user_location)): ?>
-              <div class="teaser-location-container">
-                <p class="teaser-content-field"><?php print render($user_location); ?></p>
-              </div>
-            <?php endif ?>
-
-          </div>
-        <?php endif ?>
-
-        <?php if (isset($litter_price_per_young)): ?>
-          <div class="teaser-section-column">
-            <div class="teaser-price-per-young-container">
-              <p class="teaser-content-label"><?php print t('Pris pr. hvalp'); ?></p>
-              <p class="teaser-content-field"><?php print render($litter_price_per_young); ?></p>
-            </div>
-          </div>
-        <?php endif ?>
-
-      </section>
-      <!-- End - breed, location and price -->
-
-      <!-- Begin - rating -->
-      <section class="teaser-section-2-columns">
-      </section>
-      <!-- End - rating -->
-
-      <!-- Begin - birth- and salesdate -->
-      <section class="teaser-section-2-columns teaser-section-2-columns-bordered">
-
-        <?php if (isset($litter_birthdate)): ?>
-          <div class="teaser-section-column">
-            <div class="teaser-birthdate-container">
-              <p class="teaser-content-label"><?php print t('Fødselsdato'); ?></p>
-              <p class="teaser-content-field"><?php print render($litter_birthdate); ?></p>
-            </div>
-          </div>
-        <?php endif ?>
-
-        <?php if (isset($content['field_sales_date'])): ?>
-          <div class="teaser-section-column">
-            <div class="teaser-sales-date-container">
-              <p class="teaser-content-label"><?php print t('Salgsklar pr.'); ?></p>
-              <?php print render($content['field_sales_date']); ?>
-            </div>
-          </div>
-        <?php endif ?>
-
-      </section>
-      <!-- End - birth- and salesdate -->
-
-      <!-- Begin - button -->
-      <section>
-        <div class="teaser-link-container">
-          <?php print l(t('Vis annonce'), 'node/' . $node->nid, array('attributes' => array('class' => array('button', 'expand')))); ?>
+      <?php if (isset($content['field_registration_date'])): ?>
+        <!-- Begin - registration date -->
+        <div class="noreg-teaser-registration-date">
+          <?php print render($content['field_registration_date']); ?>
         </div>
-      </section>
-      <!-- End - button -->
+        <!-- End - registration date -->
+      <?php endif; ?>
 
+      <?php if (isset($content['field_license_plate'])): ?>
+        <!-- Begin - license plate -->
+        <div class="noreg-teaser-body-license-plate">
+          <?php print render($content['field_license_plate']); ?>
+        </div>
+        <!-- End - license plate -->
+      <?php endif; ?>
+
+      <?php if (isset($content['field_brand'])): ?>
+        <!-- Begin - brand -->
+        <div class="noreg-teaser-body-brand">
+          <?php print render($content['field_brand']); ?>
+        </div>
+        <!-- End - brand -->
+      <?php endif; ?>
+
+      <?php if (isset($content['field_vin_no'])): ?>
+        <!-- Begin - VIN number -->
+        <div class="noreg-teaser-body-vin-number">
+          <?php print render($content['field_vin_no']); ?>
+        </div>
+        <!-- End - VIN number -->
+      <?php endif; ?>
+
+      <?php if (isset($content['field_customer'])): ?>
+        <!-- Begin - customer -->
+        <div class="noreg-teaser-body-customer">
+          <?php print render($content['field_customer']); ?>
+        </div>
+        <!-- End - customer -->
+      <?php endif; ?>
+      
     </div>
     <!-- End - body -->
 
+    <!-- Begin - footer -->
+    <div class="noreg-teaser-footer">
+    </div>
+    <!-- End - footer -->
+
   </article>
   <!-- End - teaser -->
+
 <?php endif; ?>

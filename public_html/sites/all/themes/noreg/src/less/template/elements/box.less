@@ -1,48 +1,47 @@
 // |--------------------------------------------------------------------------
-// | Teaser
+// | Box
 // |--------------------------------------------------------------------------
 // |
 // | This file contains styles for the following:
-// | - .teaser
+// | - .noreg-box
 // |
 
 // --------------------------------------------------
 // Variables
 // --------------------------------------------------
 
-@noreg-teaser-stacked-spacing: @grid-gutter-width;
+@noreg-box-background-color: @gray-lighter;
 
-@noreg-teaser-background-color: @gray-lighter;
+@noreg-box-heading-top-bottom-spacing: 5px;
+@noreg-box-heading-left-right-spacing: @default-heading-left-right-spacing;
 
-@noreg-teaser-heading-top-bottom-spacing: 5px;
-@noreg-teaser-heading-left-right-spacing: @default-heading-left-right-spacing;
+@noreg-box-body-top-bottom-spacing: 5px;
+@noreg-box-body-left-right-spacing: @default-body-left-right-spacing;
 
-@noreg-teaser-body-top-bottom-spacing: 5px;
-@noreg-teaser-body-left-right-spacing: @default-body-left-right-spacing;
 
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
 
-// Teaser
-.noreg-teaser {
-	margin: floor((@noreg-teaser-stacked-spacing / 2)) 0;
-	background-color: @noreg-teaser-background-color;
+// Box
+.noreg-box {
+	background-color: @noreg-box-background-color;
 
-	.noreg-teaser-heading {
-		padding: @noreg-teaser-heading-top-bottom-spacing @noreg-teaser-heading-left-right-spacing;
+	.noreg-box-heading {
+		padding: @noreg-box-heading-top-bottom-spacing @noreg-box-heading-left-right-spacing;
 
-		.noreg-teaser-title {
+		.pane-title,
+		.noreg-box-title {
 			margin: 0;
 			.heading-h3;
 		}
 	}
 
-	.noreg-teaser-body {
-		padding: @noreg-teaser-body-top-bottom-spacing @noreg-teaser-body-left-right-spacing;
+	.noreg-box-body {
+		padding: @noreg-box-body-top-bottom-spacing @noreg-box-body-left-right-spacing;
 	}
 
-	.noreg-teaser-footer {
+	.noreg-box-footer {
 
 	}
 }
@@ -54,55 +53,55 @@
 // Mobile
 @media @media-query-mobile {
 
-	// Teaser
-	.noreg-teaser {}
+	// Box
+	.noreg-box {}
 }
 
 // Mobile - only
 @media @media-query-mobile-only {
 
-	// Teaser
-	.noreg-teaser {}
+	// Box
+	.noreg-box {}
 }
 
 // Tablet
 @media @media-query-tablet {
 
-	// Teaser
-	.noreg-teaser {}
+	// Box
+	.noreg-box {}
 }
 
 // Tablet - only
 @media @media-query-tablet-only {
 
-	// Teaser
-	.noreg-teaser {}
+	// Box
+	.noreg-box {}
 }
 
 // Desktop
 @media @media-query-desktop {
 
-	// Teaser
-	.noreg-teaser {}
+	// Box
+	.noreg-box {}
 }
 
 // Desktop - only
 @media @media-query-desktop-only {
 
-	// Teaser
-	.noreg-teaser {}
+	// Box
+	.noreg-box {}
 }
 
 // Large desktop
 @media @media-query-large-desktop {
 
-	// Teaser
-	.noreg-teaser {}
+	// Box
+	.noreg-box {}
 }
 
 // Large desktop - only
 @media @media-query-large-desktop-only {
 
-	// Teaser
-	.noreg-teaser {}
+	// Box
+	.noreg-box {}
 }
