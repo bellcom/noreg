@@ -1,21 +1,23 @@
 {
-    "name": "Noreg",
-    "description": "Website",
-    "version": "0.0.1",
-    "dependencies": {
-        "jquery": "~2.*",
-        "jquery-ui": "~1.*",
-        "bootstrap": "~3.*",
-        "fontawesome": "~4.*",
-        "respond": "~1.*",
-        "html5shiv": "~3.*",
-        "fastclick": "~1.*",
-        "bs3-designer": "~0.*"
-    },
-    "ignore": [
-        "bower_components"
-    ],
-    "authors": [
-        "Morten Nissen <mail@hjemmesidekongen.dk> (http://hjemmesidekongen.dk)"
-    ]
+  "name": "Noreg",
+  "description": "Website",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap": "~3.*",
+    "bs3-designer": "~0.*",
+    "fastclick": "~1.*",
+    "fontawesome": "~4.*",
+    "html5shiv": "~3.*",
+    "imagesloaded": "~3.1.*",
+    "jquery": "~2.*",
+    "jquery-ui": "~1.*",
+    "masonry": "~3.3.*",
+    "respond": "~1.*"
+  },
+  "ignore": [
+    "bower_components"
+  ],
+  "authors": [
+    "Morten Nissen <mail@hjemmesidekongen.dk> (http://hjemmesidekongen.dk)"
+  ]
 }

@@ -20,7 +20,10 @@
             "src/vendor/jquery.cookie/jquery.cookie.js",
             "src/vendor/appear/jquery.appear.js",
             "src/vendor/fastclick/lib/fastclick.js",
+            "src/vendor/imagesloaded/imagesloaded.pkgd.js",
+            "src/vendor/masonry/dist/masonry.pkgd.js",
             "src/js/bs3-sidebar.js",
+            "src/js/content-filter.js",
             "src/js/init.js"
         ],
         "jsIe9Lt": [
