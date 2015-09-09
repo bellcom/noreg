@@ -14,11 +14,20 @@
 
 @noreg-teaser-background-color: @gray-lighter;
 
+//== Heading
+@noreg-teaser-heading-font-color: @gray-darker;
 @noreg-teaser-heading-top-bottom-spacing: 5px;
 @noreg-teaser-heading-left-right-spacing: @default-heading-left-right-spacing;
 
+//== Body
 @noreg-teaser-body-top-bottom-spacing: 5px;
 @noreg-teaser-body-left-right-spacing: @default-body-left-right-spacing;
+
+//== Footer
+@noreg-teaser-footer-background-color: @gray-dark;
+@noreg-teaser-footer-icon-font-color: @gray-light;
+@noreg-teaser-footer-top-bottom-spacing: 5px;
+@noreg-teaser-footer-left-right-spacing: @default-body-left-right-spacing;
 
 // --------------------------------------------------
 // Styling
@@ -34,16 +43,56 @@
 
 		.noreg-teaser-title {
 			margin: 0;
-			.heading-h3;
+			.heading-h6;
+
+			&,
+			a {
+				color: @noreg-teaser-heading-font-color;
+			}
 		}
 	}
 
 	.noreg-teaser-body {
 		padding: @noreg-teaser-body-top-bottom-spacing @noreg-teaser-body-left-right-spacing;
+
+		.noreg-teaser-body-starting-date,
+		.noreg-teaser-body-registration-date {
+			.noreg-date;
+		}
+
+		.noreg-teaser-body-action-button {
+			text-align: center;
+			padding: 10px 0;
+
+			.btn {
+				min-width: 150px;
+			}
+		}
 	}
 
 	.noreg-teaser-footer {
+		background-color: @noreg-teaser-footer-background-color;
+		padding: @noreg-teaser-footer-top-bottom-spacing @noreg-teaser-footer-left-right-spacing;
 
+		.noreg-teaser-footer-button {
+			position: relative;
+			float: left;
+			color: #fff;
+
+			// Additional elements
+			+ .noreg-teaser-footer-button {
+				margin-left: 10px;
+			}
+
+			.icon {
+				vertical-align: middle;
+				float: left;
+				margin-right: 3px;
+				color: @noreg-teaser-footer-icon-font-color;
+			}
+		}
+
+		&:extend(.clearfix all);
 	}
 }
 

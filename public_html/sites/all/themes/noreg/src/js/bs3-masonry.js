@@ -13,7 +13,7 @@
 // | - Use appear on non-touch devices
 // |
 
-var contentFilter = (function ($) {
+var bs3Masonry = (function ($) {
     'use strict';
 
     var Modernizr = {};
@@ -39,7 +39,7 @@ var contentFilter = (function ($) {
      */
     function registerEventHandlers() {
 
-        $('.content-filter-wrapper').resize(function () {
+        $('.bs3-masonry-wrapper').resize(function () {
             applyMasonry();
         });
 
@@ -52,12 +52,12 @@ var contentFilter = (function ($) {
      * Apply Masonry
      */
     function applyMasonry() {
-        var $wrapper = $('.content-filter-wrapper');
-console.log('LOADED');
+        var $wrapper = $('.bs3-masonry-wrapper');
+
         $wrapper.imagesLoaded(function () {
 
             $wrapper.masonry({
-                itemSelector: '.content-filter-item'
+                itemSelector: '.bs3-masonry-item'
             });
         });
     }

@@ -18,8 +18,8 @@
   FastClick.attach(document.body);
 
   // --------------------------------------------------
-  // Content filter
+  // BS3 masonry
   // --------------------------------------------------
-  contentFilter.init();
+  bs3Masonry.init();
 
 })(jQuery);

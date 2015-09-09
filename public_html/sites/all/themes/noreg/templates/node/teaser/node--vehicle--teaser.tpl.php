@@ -14,7 +14,7 @@
 
       <?php if (isset($content['field_registration_date'])): ?>
         <!-- Begin - registration date -->
-        <div class="noreg-teaser-registration-date">
+        <div class="noreg-teaser-body-registration-date">
           <?php print render($content['field_registration_date']); ?>
         </div>
         <!-- End - registration date -->
@@ -51,13 +51,31 @@
         </div>
         <!-- End - customer -->
       <?php endif; ?>
-      
+
+      <!-- Begin - action -->
+      <div class="noreg-teaser-body-action-button">
+        <a href="<?php print $base_url . $node_url; ?>" class="btn btn-primary btn-loader"><?php print t('Vis køretøj'); ?> <span class="icon fa fa-arrow-right"></span></a>
+      </div>
+      <!-- End - action -->
+
     </div>
     <!-- End - body -->
 
     <!-- Begin - footer -->
-    <div class="noreg-teaser-footer">
-    </div>
+    <?php if (isset($content['field_license_plate'])): ?>
+      <div class="noreg-teaser-footer">
+
+        <?php if (isset($content['field_license_plate'])): ?>
+          <!-- Begin - license plate -->
+          <span class="noreg-teaser-footer-button" data-toggle="tooltip" title="<?php print t('Reg. nr.'); ?>">
+          <span class="icon fa fa-car"></span>
+            <?php print render($content['field_license_plate']); ?>
+        </span>
+          <!-- End - license plate -->
+        <?php endif; ?>
+
+      </div>
+    <?php endif; ?>
     <!-- End - footer -->
 
   </article>
