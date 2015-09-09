@@ -1,0 +1,4 @@
+name        = 'Raw text output - field formatter'
+description = 'Add a field formatter that renders raw output without divs.'
+core        = 7.x
+package     = 'Noreg'
