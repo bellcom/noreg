@@ -22,7 +22,7 @@
 
       <?php if (isset($content['field_phone_customer_no'])): ?>
         <!-- Begin - customer/phone number -->
-        <div class="noreg-body-phone-customer-number">
+        <div class="noreg-list-body-phone-customer-number">
           <?php print render($content['field_phone_customer_no']); ?>
         </div>
         <!-- End - customer/phone number -->

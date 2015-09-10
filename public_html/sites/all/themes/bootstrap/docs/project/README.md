@@ -1,6 +1,6 @@
+<!-- @file Overview for maintaining and developing the Drupal Bootstrap project. -->
 <!-- @defgroup -->
-<!-- @summary Documentation landing page and topics for maintaining the Drupal Bootstrap project. -->
-# Overview of Drupal Bootstrap Project Development
+# Project Development
 
 Generally speaking, these topics will not be very helpful to you unless you are
 a maintainer for this project. If you're just curious about our process or even

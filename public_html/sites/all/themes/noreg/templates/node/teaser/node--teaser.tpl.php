@@ -5,7 +5,7 @@
 
     <!-- Begin - heading -->
     <div class="noreg-teaser-heading">
-      <h3 class="noreg-teaser-title"></h3>
+      <h3 class="noreg-teaser-title"><a href="<?php print $base_url . $node_url; ?>"><?php print $title; ?></a></h3>
     </div>
     <!-- End - heading -->
 

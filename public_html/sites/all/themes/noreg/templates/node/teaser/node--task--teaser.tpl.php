@@ -38,7 +38,7 @@
 
       <!-- Begin - action -->
       <div class="noreg-teaser-body-action-button">
-        <a href="<?php print $base_url . $node_url; ?>" class="btn btn-primary btn-loader"><?php print t('Vis opgave'); ?> <span class="icon fa fa-arrow-right"></span></a>
+        <a href="<?php print $base_url . $node_url; ?>" class="btn btn-default btn-loader"><?php print t('Vis opgave'); ?> <span class="icon fa fa-arrow-right"></span></a>
       </div>
       <!-- End - action -->
 

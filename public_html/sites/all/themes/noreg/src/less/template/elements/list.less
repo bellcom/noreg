@@ -12,6 +12,7 @@
 
 @noreg-list-stacked-spacing: @grid-gutter-width;
 
+@noreg-list-heading-font-color: @gray-darker;
 @noreg-list-heading-top-bottom-spacing: 3px;
 @noreg-list-heading-left-right-spacing: 0;
 
@@ -32,6 +33,11 @@
 		.noreg-list-title {
 			margin: 0;
 			.heading-h6;
+
+			&,
+			a {
+				color: @noreg-list-heading-font-color;
+			}
 		}
 	}
 

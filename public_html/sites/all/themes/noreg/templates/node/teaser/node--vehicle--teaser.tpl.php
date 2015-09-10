@@ -44,6 +44,12 @@
         <!-- End - VIN number -->
       <?php endif; ?>
 
+      <!-- Begin - action -->
+      <div class="noreg-teaser-body-action-button">
+        <a href="<?php print $base_url . $node_url; ?>" class="btn btn-default btn-loader"><?php print t('Vis køretøj'); ?> <span class="icon fa fa-arrow-right"></span></a>
+      </div>
+      <!-- End - action -->
+
       <?php if (isset($content['field_customer'])): ?>
         <!-- Begin - customer -->
         <div class="noreg-teaser-body-customer">
@@ -51,12 +57,6 @@
         </div>
         <!-- End - customer -->
       <?php endif; ?>
-
-      <!-- Begin - action -->
-      <div class="noreg-teaser-body-action-button">
-        <a href="<?php print $base_url . $node_url; ?>" class="btn btn-primary btn-loader"><?php print t('Vis køretøj'); ?> <span class="icon fa fa-arrow-right"></span></a>
-      </div>
-      <!-- End - action -->
 
     </div>
     <!-- End - body -->

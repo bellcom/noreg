@@ -1,58 +1,27 @@
-<!-- @mainpage -->
-<!-- @summary Documentation landing page and topics for the http://drupal-bootstrap.org site. -->
-# Drupal Bootstrap Documentation
+<!-- @file Project Page -->
+# Bootstrap
 
-This site is an API reference for the Drupal Bootstrap base theme, generated
-from Markdown files and DOXYGEN based comments embedded in the PHP source code.
+> Sleek, intuitive, and powerful mobile first front-end framework for faster and
+> easier web development. Bootstrap has become one of the most popular front-end
+> frameworks and open source projects in the world.
 
-The term "bootstrap" can be used quite excessively through out this project's
-documentation. For clarity, we will attempt to only use it verbosely in one of
-the following ways:
+This base theme bridges the gap between Drupal and the [Bootstrap Framework].
 
-- "[Drupal Bootstrap](https://www.drupal.org/project/bootstrap)"  
-  Will be used when referring to the Drupal base theme project. The word
-  "Drupal" should always precede it. Both words should be capitalized to
-  indicate a proper name.
-- "[Bootstrap Framework](http://getbootstrap.com)"  
-  Will be used when referring to the external front end framework. The word
-  "Framework" should always follow it. Both words should be capitalized to
-  indicate a proper name.
-- "[drupal_bootstrap](https://api.drupal.org/apis/drupal_bootstrap)"  
-  Will be used when referring to Drupal's bootstrapping process or phase. An
-  underscore (\_) should always be used to join the two terms together to
-  indicate that it is a procedural term.
-  
-When referring to files inside the Drupal Bootstrap project directory, they
-should always start with `./` and continue to specify the full path to the file
-or directory inside it. For example, the file that is responsible for displaying
-this text is located at `./README.md`.
+### Features
+- [jsDelivr CDN](http://www.jsdelivr.com) for "out-of-the-box" styling and
+  faster page load times.
+- [Bootswatch](http://bootswatch.com) theme support, if using the CDN.
+- Glyphicons support via [Icon API](https://www.drupal.org/project/icon).
+- Extensive integration and template/preprocessor overrides for most of the
+  [Bootstrap Framework] CSS, Components and JavaScript
+- Theme settings to further enhance the Drupal Bootstrap integration:
+  - [Breadcrumbs](http://getbootstrap.com/components/#breadcrumbs)
+  - [Navbar](http://getbootstrap.com/components/#navbar)
+  - [Popovers](http://getbootstrap.com/javascript/#popovers)
+  - [Tooltips](http://getbootstrap.com/javascript/#tooltips)
+  - [Wells](http://getbootstrap.com/components/#wells) (per region)
 
-When referring to files inside a Drupal Bootstrap sub-theme, they should always
-start with `./example_subtheme/` and continue to specify the full path to the
-file or directory inside it. For example, the main file Drupal will search for:
-`./example_subtheme/template.php`.
+### Documentation
+See our dedicated [documentation site](http://drupal-bootstrap.org).
 
----
-
-Here are some topics to help you get started using and developing with Drupal
-Bootstrap. They correlate with the various folders and files underneath the
-`./docs` folder inside the project's root folder.
-
-## Theme Settings
-- @link settings Overview of Drupal Bootstrap Theme Settings @endlink
-
-## Sub-themes
-- @link subtheme Overview of Drupal Bootstrap Sub-Theming @endlink
-  - @link subtheme_drush Drush Support @endlink
-  - @link subtheme_utility Utility Functions @endlink
-
-## APIs
-- @link api Overview of Drupal Bootstrap APIs @endlink
-
-## Theme Registry
-- @link registry Overview of Drupal Bootstrap and the Theme Registry @endlink
-
-## Project
-- @link project Overview of Drupal Bootstrap Project Development @endlink
-  - @link project_grunt Grunt Tasks @endlink
-  - @link project_releases Releases @endlink
+[Bootstrap Framework]: http://getbootstrap.com

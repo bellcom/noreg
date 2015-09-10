@@ -10,4 +10,10 @@ function noreg_content_types_entity_info_alter(&$entity_info) {
     'label'           => t('List'),
     'custom settings' => TRUE,
   );
+
+  // Includeable
+  $entity_info['node']['view modes']['includeable'] = array(
+    'label'           => t('Includeable'),
+    'custom settings' => TRUE,
+  );
 }
