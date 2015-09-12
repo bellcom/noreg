@@ -76,7 +76,7 @@ module.exports = function (grunt) {
 
     modernizr: {
       app: {
-        devFile      : 'remote',
+        devFile      : '<%= config.directory.src %>/js/modernizr-build.js',
         parseFiles   : true,
         files        : {
           src: [gruntConfig.concat.jsApp, gruntConfig.concat.jsIe9Lt, '<%= config.directory.dist %>/css/stylesheet.css']
