@@ -177,6 +177,12 @@ module.exports = function (grunt) {
             cwd   : '<%= config.directory.vendor %>/bs3-designer/less/',
             src   : '**/*',
             dest  : '<%= config.directory.src %>/less/vendor/bs3-designer/'
+          },
+          {
+            expand: true,
+            cwd   : '<%= config.directory.vendor %>/bs3-masonry/less/',
+            src   : '**/*',
+            dest  : '<%= config.directory.src %>/less/vendor/bs3-masonry/'
           }
         ]
       },
