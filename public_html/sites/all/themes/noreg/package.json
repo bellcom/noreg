@@ -1,12 +1,12 @@
 {
-    "name": "bs3-sidebar",
+    "name": "Noreg",
     "version": "0.0.1",
     "description": "Base Grunt setup.",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "Hjemmeside Kongen IvS",
+    "author": "Morten Nissen <mn@bellcom.dk>",
     "license": "MIT",
     "dependencies": {
         "grunt": "^0.4.5",
